@@ -4,9 +4,11 @@
   --font-display: "Playfair Display", serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  /* The Sanctuary Palette */
-  --color-stone-950: #0c0a09;
-  --color-stone-900: #1c1917;
+  /* The Sanctuary Palette - Updated Solarium */
+  --color-stone-950: #1c1917;
+  /* Warm dark stone */
+  --color-stone-900: #292524;
+  /* Lighter warm stone */
   --color-rose-500: #f43f5e;
   --color-sage-500: #10b981;
   --color-gold-500: #d97706;
@@ -14,18 +16,23 @@
 
 @layer utilities {
   .glass-panel {
-    @apply backdrop-blur-2xl bg-stone-900/40 border border-stone-200/10 shadow-2xl;
-    box-shadow: 
+    @apply backdrop-blur-2xl shadow-2xl;
+    background-color: rgba(28, 25, 23, 0.6);
+    /* Warm tint surface */
+    border: 1px solid rgba(244, 63, 94, 0.2);
+    /* Soft Rose Gold border */
+    box-shadow:
       0 8px 32px rgba(0, 0, 0, 0.5),
-      inset 0 0 0 1px rgba(255, 241, 242, 0.05); /* Soft inner rim */
+      inset 0 0 0 1px rgba(255, 241, 242, 0.05);
+    /* Soft inner rim */
   }
-  
+
   .text-glow {
     @apply bg-clip-text text-transparent bg-gradient-to-b from-stone-100 to-stone-400;
   }
 }
 
 body {
-  background-color: #0c0a09;
+  background-color: #1c1917;
   color: #fafaf9;
 }

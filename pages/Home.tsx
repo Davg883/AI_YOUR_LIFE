@@ -7,22 +7,31 @@ export const Home: React.FC = () => {
         <main className="min-h-screen bg-stone-950 text-stone-100 selection:bg-rose-500/30">
 
             {/* Hero Section */}
-            <section className="relative min-h-[80vh] flex flex-col items-center justify-center text-center px-6">
-                <div className="absolute inset-0 bg-gradient-to-b from-stone-900/0 via-stone-900/0 to-stone-950 pointer-events-none" />
+            <section className="relative min-h-[80vh] flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+                {/* Background Image */}
+                <div
+                    className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+                    style={{ backgroundImage: "url('https://res.cloudinary.com/dptqxjhb8/image/upload/v1766691940/orangery_fnhmne.png')" }}
+                />
 
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-medium tracking-tight mb-8 animate-fade-in">
-                    <span className="text-glow">Reclaim your attention.</span>
-                    <br />
-                    <span className="text-stone-500">Reset your biology.</span>
-                </h1>
+                {/* Dimming Layer */}
+                <div className="absolute inset-0 z-10 bg-stone-950/40" />
 
-                <p className="max-w-xl mx-auto text-lg text-stone-400 font-mono mb-12 leading-relaxed">
-                    The modern world is designed to drain you. We build tools to restore your sovereignty.
-                    Step into a life of clarity, vitality, and purpose.
-                </p>
+                <div className="relative z-20">
+                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-medium tracking-tight mb-8 animate-fade-in drop-shadow-lg">
+                        <span className="text-white drop-shadow-md">Reclaim your attention.</span>
+                        <br />
+                        <span className="text-stone-200 drop-shadow-md">Reset your biology.</span>
+                    </h1>
 
-                <div className="flex gap-4">
-                    {/* CTA could go here */}
+                    <p className="max-w-xl mx-auto text-lg text-white font-mono mb-12 leading-relaxed drop-shadow-md">
+                        The modern world is designed to drain you. We build tools to restore your sovereignty.
+                        Step into a life of clarity, vitality, and purpose.
+                    </p>
+
+                    <div className="flex gap-4">
+                        {/* CTA could go here */}
+                    </div>
                 </div>
             </section>
 
