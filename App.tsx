@@ -2,14 +2,20 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { CommandBar } from './components/CommandBar';
 import { Home } from './pages/Home';
 import { Detox } from './pages/Detox';
 import { MealPlan } from './pages/MealPlan';
 import { Legacy } from './pages/Legacy';
+import { Quiz } from './pages/Quiz';
+import { Admin } from './pages/Admin';
 
 const App: React.FC = () => {
   return (
     <Router>
+      {/* The Persistent HUD - Command Bar */}
+      <CommandBar />
+
       <Routes>
         {/* Hub Page with Layout */}
         <Route path="/" element={
@@ -20,10 +26,16 @@ const App: React.FC = () => {
           </>
         } />
 
+        {/* The Diagnostic Engine */}
+        <Route path="/quiz" element={<Quiz />} />
+
         {/* Sovereign Wellness Tools */}
         <Route path="/detox" element={<Detox />} />
         <Route path="/meal-plan" element={<MealPlan />} />
         <Route path="/legacy" element={<Legacy />} />
+
+        {/* Mission Control - Admin Dashboard */}
+        <Route path="/admin" element={<Admin />} />
 
         {/* Placeholder for Blog */}
         <Route path="/blog" element={

@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
                     <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
                     <span className="text-xs font-mono text-slate-500 uppercase tracking-widest">System Operational</span>
                 </div>
-                <p className="text-slate-600 text-xs font-mono">&copy; 2025 AI_BIZ_SYSTEMS // ALL RIGHTS RESERVED</p>
+                <p className="text-slate-600 text-xs font-mono">&copy; 2026 LUMINOUS DEEP // SOVEREIGN INTELLIGENCE</p>
             </div>
         </footer>
     );

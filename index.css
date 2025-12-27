@@ -16,15 +16,27 @@
 
 @layer utilities {
   .glass-panel {
-    @apply backdrop-blur-2xl shadow-2xl;
+    @apply backdrop-blur-2xl shadow-2xl rounded-xl;
     background-color: rgba(28, 25, 23, 0.6);
     /* Warm tint surface */
-    border: 1px solid rgba(244, 63, 94, 0.2);
-    /* Soft Rose Gold border */
+    border: 1px solid rgba(244, 160, 140, 0.25);
+    /* Rose Gold border */
     box-shadow:
       0 8px 32px rgba(0, 0, 0, 0.5),
+      0 0 20px rgba(244, 160, 140, 0.08),
+      0 0 40px rgba(244, 160, 140, 0.04),
       inset 0 0 0 1px rgba(255, 241, 242, 0.05);
-    /* Soft inner rim */
+    /* Subtle rose gold outer glow + soft inner rim */
+    transition: box-shadow 0.4s ease, border-color 0.4s ease;
+  }
+
+  .glass-panel:hover {
+    border-color: rgba(244, 160, 140, 0.4);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.5),
+      0 0 25px rgba(244, 160, 140, 0.12),
+      0 0 50px rgba(244, 160, 140, 0.06),
+      inset 0 0 0 1px rgba(255, 241, 242, 0.08);
   }
 
   .text-glow {
